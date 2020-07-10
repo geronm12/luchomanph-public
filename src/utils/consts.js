@@ -1,0 +1,1 @@
+export const PATH = "https://fotosback.herokuapp.com";

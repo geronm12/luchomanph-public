@@ -1,0 +1,126 @@
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    
+    .navegation-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 65px;
+       
+     
+        h3{
+         margin-top: 10px;
+         margin-left: 10px;
+         color: white;
+        }
+     
+         .button{
+             height: 50px;
+             width: 50px;
+             margin-top: 5px;
+             border-radius: 50%;
+             button{
+                 height: 50px;
+                 width: 50px;
+                 border-radius: 50%;
+                 background-color: #242526;
+                 border: none;
+
+                  &:active{
+                      background-color: #363739;
+                      border: 0;
+                      box-shadow: none !important;
+                  }
+
+                  &:focus{
+                      box-shadow: none;
+                      border: 0;
+                      outline: none;
+                  }
+             }
+         }
+     
+     }
+     
+}
+
+
+.contenedor{
+    width: 150px !important;
+    height:25vh;
+    background-color: #242526;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+        
+        ul{
+            display: flex;
+            flex-direction: column;
+            font-family: Helvetica;
+            margin-top: 10px;
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                list-style: none;
+                width: 100%;
+                display: flex;
+                margin-bottom: 10px; 
+                margin-left: 10px;
+                width: 140px;
+                &:hover{
+                    background-color: #363739;
+                    width: 100%;
+                    border-radius: 10px;
+                }
+
+                &:active{
+                    background-color: #48494C;
+                }
+
+                img{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+  }
+
+
+.fade-in{
+    animation: in 2s;
+    right: -25px;
+}
+
+.fade-out{
+    animation: out 2s;
+    position: relative;
+    right: 1000px;
+}
+
+
+@keyframes in{
+    0% {right: 230px;}
+    100% {right: -25px;}
+   
+}
+
+@keyframes out{
+    0% {right: -25px;}
+    100% {right: 230px;}
+}
+
+

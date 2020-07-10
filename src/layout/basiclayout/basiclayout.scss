@@ -1,0 +1,14 @@
+.basic-layout{  
+      
+     &__menu{
+        
+     }
+     
+     &__children{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      
+         
+     }
+}

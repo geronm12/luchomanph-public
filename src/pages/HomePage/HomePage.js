@@ -4,7 +4,12 @@ import BasicLayout from "../../layout/basiclayout";
 export default function HomePage() {
     return (
       <BasicLayout>
-          <h3>Home</h3>
+         <h1>Home</h1>
+         {/* {Carrousel con fotos}
+         {Ultimos Albumes con fotos}
+         {Ultimos Post con fotos} */}
       </BasicLayout>
+
+
     )
 }

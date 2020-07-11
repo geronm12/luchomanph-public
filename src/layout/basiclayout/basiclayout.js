@@ -15,15 +15,9 @@ export default function basiclayout(props) {
            <Col xs={12}>
            <Row>
                <Navbar></Navbar>
-           </Row>
-           <Row>
-               <Col xs ={2}>
-               </Col>
-               <Col xs={9}>
                {children}
-               </Col>
-           </Row>
-           </Col>
+            </Row>
+            </Col>
        </Container>
     )
 }

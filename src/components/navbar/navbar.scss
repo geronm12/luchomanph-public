@@ -2,21 +2,32 @@
 .navigation{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: left;
-    
+    width: 15%;
+    height: 250px;
+ 
     .navegation-container{
         display: flex;
-        align-items: center;
-        justify-content: center;
         height: 65px;
-       
-     
-        h3{
-         margin-top: 10px;
-         margin-left: 10px;
-         color: white;
+        position:  fixed;
+        
+         a{
+             
+                text-decoration: none;
+                margin-top: 10px;
+                margin-left: 10px;
+                color: white;
+                font-size: 25px;
+                font-weight: bold;
+                
+                &:hover{
+                    cursor: pointer !important;
+                     
+                }
         }
+
+
+      
+      
      
          .button{
              height: 50px;
@@ -29,6 +40,7 @@
                  border-radius: 50%;
                  background-color: #242526;
                  border: none;
+                 cursor: pointer !important;
 
                   &:active{
                       background-color: #363739;
@@ -51,21 +63,23 @@
 
 .contenedor{
     width: 150px !important;
-    height:25vh;
+    height:30vh;
     background-color: #242526;
     overflow: hidden;
     border-radius: 5px;
     position: relative;
     display: flex;
-    justify-content: left;
     border-right: 1px solid white;
     border-left: 1px solid white;
+    top: 58px;
+    
     &__menu{
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: 50px;
-        
+        margin-top: 18px;
+        cursor: pointer;
         ul{
             display: flex;
             flex-direction: column;
@@ -81,10 +95,12 @@
                 margin-bottom: 10px; 
                 margin-left: 10px;
                 width: 140px;
+                
                 &:hover{
                     background-color: #363739;
                     width: 100%;
                     border-radius: 10px;
+                    
                 }
 
                 &:active{
@@ -124,3 +140,4 @@
 }
 
 
+ 

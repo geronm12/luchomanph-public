@@ -1,11 +1,10 @@
 import React from 'react';
 import BasicLayout from "../../layout/basiclayout";
-import PostsContainer from "../../components/postsContainer";
 
-export default function BlogPage() {
+export default function AboutPage() {
     return (
         <BasicLayout>
-          <PostsContainer></PostsContainer>
+            <h1>About</h1>
         </BasicLayout>
     )
 }

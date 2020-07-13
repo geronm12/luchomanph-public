@@ -11,6 +11,8 @@
     h1{
         color: white;
         margin-top: 70px;
+        font-weight: bold;
+
     }
 
     img{
@@ -26,14 +28,45 @@
     &__button{
       
         width: 100%;
+        height: 50px;
         align-items: center;
         justify-content: center;
         display: flex;
+     
 
         button{
-            width: 80%;
           
+            border: none;
+            width: 100px;
+            background-color: transparent;
+            &:focus{
+                background-color: transparent;
+                border: none;
+                box-shadow: none !important;
+            }
+
+            &:hover{
+                
+                background-color: transparent;
+                img{
+                    animation: grow 1s infinite;
+                }
+              
+            }
+
+            &:active{
+                 
+               background-color: transparent !important;
+            }
+        
         }
     }
 
+}
+
+
+@keyframes grow {   
+    0% {height: 50px;}
+    50% {height: 60px;}
+    100% {height: 50px;}
 }

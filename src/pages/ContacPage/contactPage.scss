@@ -1,0 +1,38 @@
+.contact-page{
+    min-height: 70vh;
+    margin-top: 70px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    color:white;
+
+
+    &__cuerpo{
+        
+        color: white;
+        flex-direction: column;
+        display: flex;
+ 
+        width: 40%;
+        a{
+            text-decoration: none;
+            color: white;
+            width: 100%;
+          
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            
+            img{    
+                width: 50px;
+                margin-right: 10px;
+            }
+        }
+ 
+    }
+}

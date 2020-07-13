@@ -14,8 +14,8 @@
           a{
              
                 text-decoration: none;
-                margin-top: 10px;
-                margin-left: 10px;
+                margin-top: 7px;
+                margin-left: 5px;
                 color: white;
                 font-size: 25px;
                 font-weight: bold;
@@ -34,11 +34,15 @@
              width: 50px;
              margin-top: 5px;
              border-radius: 50%;
+             margin-left: 15px;
              button{
-                 height: 50px;
-                 width: 50px;
+                 height: 45px;
+                 width: 45px;
                  border-radius: 50%;
                  background-color: #242526;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
                  border: none;
                  cursor: pointer !important;
 

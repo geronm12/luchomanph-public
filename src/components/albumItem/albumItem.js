@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {map} from 'lodash';
 import {Carousel, Modal} from 'react-bootstrap';
+import Motion from "../../pages/pagesAnimation";
 
 import "./albumItem.scss";
  
@@ -13,16 +14,18 @@ export default function AlbumItem(props) {
 
     const titulo = album?.titulo;
 
+ 
+
+
     return (
        <div className="album-item">
           <div className="album-item__foto">
-           <img src={album.fotos[0].fotoUrl} alt={album.titulo} onClick={() => setShowModal(true)}/>
+          <Motion><img src={album?.fotos[0].fotoUrl} alt={album.titulo} onClick={() => setShowModal(true)}/></Motion> 
           </div> 
           <Modal show={show} onHide={() => setShowModal(false)}>
             <ModalContent fotos={fotos} titulo={titulo}/>
           </Modal>
-              
-       </div>
+         </div>
     )
 
 }

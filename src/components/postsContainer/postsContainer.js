@@ -12,7 +12,7 @@ export default function PostsContainer() {
     const [posts, setPosts] = useState(null);
     const [loading, setLoading] = useState(false);
     const [page, setPage] = useState(1);
-
+    
 
     const getPosts = () => {
         setLoading(true);
@@ -38,11 +38,10 @@ export default function PostsContainer() {
     return (
        <Container className="post-container">
            {loading ? <div className="post-container__spinner">
-               <h2>Cargando</h2>
-               <Spinner animation="border" variant="light"/>
+                <Spinner animation="border" variant="light"/>
            </div> : 
             <div className="card-container">
-            {map(posts, (post, index) => (<Motion><PostItem key={index} post={post}/></Motion> ))}
+            {map(posts, (post, index) => (<Motion  key={index}><PostItem post={post}/></Motion> ))}
             </div>
         }
            

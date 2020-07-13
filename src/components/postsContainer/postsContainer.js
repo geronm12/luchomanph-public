@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {GetPosts} from "../../api/Gets";
-import {Spinner, Container} from 'react-bootstrap';
+import {Spinner, Container,CardDeck} from 'react-bootstrap';
 import PostItem from "../postItem";
 import {map} from "lodash";
+import Motion from "../../pages/pagesAnimation";
+
+import "./postContainer.scss";
 
 export default function PostsContainer() {
     
@@ -33,14 +36,16 @@ export default function PostsContainer() {
 
 
     return (
-       <Container>
-           {loading ? <div>
-               <h2>Cargando...</h2>
+       <Container className="post-container">
+           {loading ? <div className="post-container__spinner">
+               <h2>Cargando</h2>
                <Spinner animation="border" variant="light"/>
            </div> : 
-           map(posts, (post, index) => (
-            <PostItem key={index} post={post}/>
-           ))}
+            <div className="card-container">
+            {map(posts, (post, index) => (<Motion><PostItem key={index} post={post}/></Motion> ))}
+            </div>
+        }
+           
        </Container>
     )
 }

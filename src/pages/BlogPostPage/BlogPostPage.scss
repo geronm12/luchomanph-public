@@ -1,0 +1,39 @@
+.blog-post{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    margin-top: 70px;
+    align-self: center;
+    border-radius: 10px;
+   
+    h1{
+        color: white;
+        margin-top: 70px;
+    }
+
+    img{
+        width: 50%;
+    }
+
+    p{
+        color: white;
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    &__button{
+      
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        button{
+            width: 80%;
+          
+        }
+    }
+
+}

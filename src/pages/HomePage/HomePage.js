@@ -1,15 +1,17 @@
 import React from 'react';
 import BasicLayout from "../../layout/basiclayout";
+import {Carousel} from 'react-bootstrap';
+import Motion from "../pagesAnimation";
 
 export default function HomePage() {
     return (
-      <BasicLayout>
-         <h1>Home</h1>
-         {/* {Carrousel con fotos}
-         {Ultimos Albumes con fotos}
-         {Ultimos Post con fotos} */}
-      </BasicLayout>
+       
+         <BasicLayout>
+            <Motion><h1>Index</h1></Motion>
+         </BasicLayout>
+        
+         )
+         
 
 
-    )
 }

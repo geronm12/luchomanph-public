@@ -4,6 +4,7 @@ import {GetAlbums} from "../../api/Gets";
 import AlbumItem from "../albumItem";
 import { map } from 'lodash';
 import "./albumContainer.scss";
+import Motion from "../../pages/pagesAnimation";
 
 export default function AlbumContainer() {
   
@@ -34,13 +35,17 @@ export default function AlbumContainer() {
 
 
     return (
-         <Container>
+      
+         <Container className="album-container">
             {loading ? <div className="album-spinner-container">
                 <h2>Cargando</h2>
                 <Spinner animation="border" variant="light"/></div> : 
                 map(albums, (album, index) => (
-                <AlbumItem key={index} album={album}/>
+                <Motion>
+                <AlbumItem key={index} album={album} className="album-container__item"/>
+                </Motion>
             ))}
          </Container>
+        
     )
 }

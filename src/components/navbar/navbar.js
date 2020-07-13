@@ -13,12 +13,15 @@ import './navbar.scss';
 
 export default function NavegationBar() {
 
-    const [showContent, setShowContent] = useState(true);
-  
+    const [showContent, setShowContent] = useState(window.location.pathname === "/" ? true : false);
+    
+    
     return (
        <div className="navigation">
        <div className="navegation-container">
-       <div className="navegation-container__menu"><InitialContent setShowContent={setShowContent} showContent={showContent}/></div> 
+       <div className="navegation-container__menu">
+        <InitialContent setShowContent={setShowContent} showContent={showContent}/>
+        </div> 
        <Link to="/">Luchomanph</Link>
        </div> 
        <Navigation setShowContent={setShowContent} showContent={showContent}/>  
@@ -26,7 +29,7 @@ export default function NavegationBar() {
 }
 
 function Navigation (props){
-  const { showContent} = props;
+  const { showContent, setShowContent} = props;
 
   const contenedor = showContent ? "contenedor fade-in" : "contenedor fade-out" 
 

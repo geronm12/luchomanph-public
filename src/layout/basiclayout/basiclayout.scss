@@ -1,14 +1,12 @@
 .basic-layout{  
-      
-     &__menu{
-        
-     }
+     padding: 0 !important;
+     overflow-x: hidden;
      
-     &__children{
-         display: flex;
-         justify-content: center;
-         align-items: center;
-      
-         
-     }
+}
+
+.container-middle{
+     display: flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+ 
 }

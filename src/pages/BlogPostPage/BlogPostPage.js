@@ -16,9 +16,7 @@ function BlogPostPage(nextProps) {
     const {objeto} = state;
 
     const history = useHistory();
-    
-    console.log(objeto.cuerpo);
-    
+   
     const Texto = () => {
          const text = document.getElementById("cuerpo");
          text.innerHTML = objeto.cuerpo;

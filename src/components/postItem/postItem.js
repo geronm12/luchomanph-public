@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, {useEffect} from 'react'; 
 import {useHistory, useLocation} from 'react-router-dom';
 import {CSSTransition} from "react-transition-group";
 import { makeStyles } from '@material-ui/core/styles';
@@ -27,7 +27,7 @@ export default function PostItem(props) {
 
     const location = useLocation();
 
-    return <Tarjeta post={post} history={history}/>
+    return <Tarjeta post={post} history={history} style={{overFlow: "hidden"}}/>
          
 }
 
@@ -44,16 +44,27 @@ function Tarjeta(props){
       state: {
         objeto: post
      }}
-     
+    
+
 
      const Goto = () => {
        history.push(location);
      }
 
+      const HTML = (text) => {
+        const parrafo = document.getElementById(post._id);
+        console.log(text)
+        parrafo.innerHTML = text;
+      }
+      
+      useEffect(() => {
+         HTML(tempBody)
+      }, [tempBody])
+    
 
       return (
     
-      <Card className={classes.root} style={{marginLeft: '20px', marginBottom: '20px'}}>
+      <Card className={classes.root} style={{marginLeft: '20px', marginBottom: '20px', height: "250px"}}>
       <CardActionArea onClick={Goto}>
         <CardMedia
           component="img"
@@ -66,8 +77,7 @@ function Tarjeta(props){
           <Typography gutterBottom variant="h5" component="h2">
             {post.titulo}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-          <p>{tempBody}</p>
+          <Typography variant="body2" color="textSecondary" component="div" id={post._id}>
           </Typography>
         </CardContent>
       </CardActionArea>

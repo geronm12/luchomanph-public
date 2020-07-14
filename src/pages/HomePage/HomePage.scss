@@ -1,0 +1,44 @@
+.home-page{
+
+    display: flex;
+    flex-direction: column;
+ 
+    
+    h3{
+        color: white;
+        font-weight: bold;
+        margin-top: 30px;
+        
+        img{
+            width: 30px;
+            height: 45px;
+           
+        }
+    }
+
+
+    &__albums{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+
+    &__posts{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+.carousel{
+    width: 100%  !important;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;    
+    
+    
+  
+}

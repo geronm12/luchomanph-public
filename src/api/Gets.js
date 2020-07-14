@@ -28,3 +28,32 @@ export function GetAlbums(page, string){
     });
 
 }
+
+
+export function GetLastPosts(){
+    
+    const url = `${PATH}/obtenerUltimosPosts`;
+
+    return fetch(url).then(response => {
+        return response.json();
+    }).then(result => {
+        return result;
+    }).catch(err => {
+        return err;
+    });
+
+}
+
+export function GetLastAlbums(){
+    
+    const url = `${PATH}/obtenerUltimosAlbums`;
+
+    return fetch(url).then(response => {
+        return response.json();
+    }).then(result => {
+        return result;
+    }).catch(err => {
+        return err;
+    });
+
+}

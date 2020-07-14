@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: black;
     margin-top: 70px;
     align-self: center;
     border-radius: 10px;
@@ -12,7 +11,7 @@
         color: white;
         margin-top: 70px;
         font-weight: bold;
-
+        margin-bottom: 100px;
     }
 
     img{
@@ -21,7 +20,7 @@
 
     p{
         color: white;
-        width: 70%;
+        width: 50%;
         margin-top: 10px;
     }
 

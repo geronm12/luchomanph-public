@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import BasicLayout from '../../layout/basiclayout';
 import {withRouter,useHistory} from 'react-router-dom';
 import {Button} from 'react-bootstrap';
@@ -16,24 +16,30 @@ function BlogPostPage(nextProps) {
     const {objeto} = state;
 
     const history = useHistory();
+    
 
- 
+    const Texto = () => {
+         const text = document.getElementById("cuerpo");
+         text.innerHTML = objeto.cuerpo;
+    }
+
+    useEffect(() => {
+        Texto()
+    }, [])
 
     return (
         <BasicLayout>
             <Motion>
-           
             <div className="blog-post">
             <h1>{objeto.titulo}</h1>
             <img src={objeto.fotos[0].fotoUrl} alt="foto"></img>
-            <p>
-            {objeto.cuerpo}
+            <p id = "cuerpo">
+           
             </p>
             </div>
             <div className="blog-post__button">
             <Button onClick={() => history.push("/blog")}><img src={ArrowBack} alt="back"/></Button>
             </div>
-         
             </Motion>
         </BasicLayout>
     )

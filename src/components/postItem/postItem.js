@@ -67,7 +67,7 @@ function Tarjeta(props){
             {post.titulo}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {tempBody}
+          <p>{tempBody}</p>
           </Typography>
         </CardContent>
       </CardActionArea>

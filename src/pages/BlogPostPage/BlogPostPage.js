@@ -17,7 +17,8 @@ function BlogPostPage(nextProps) {
 
     const history = useHistory();
     
-
+    console.log(objeto.cuerpo);
+    
     const Texto = () => {
          const text = document.getElementById("cuerpo");
          text.innerHTML = objeto.cuerpo;
@@ -33,9 +34,9 @@ function BlogPostPage(nextProps) {
             <div className="blog-post">
             <h1>{objeto.titulo}</h1>
             <img src={objeto.fotos[0].fotoUrl} alt="foto"></img>
-            <p id = "cuerpo">
-           
-            </p>
+            <div id = "cuerpo" className="blog-post__body">
+            
+            </div>
             </div>
             <div className="blog-post__button">
             <Button onClick={() => history.push("/blog")}><img src={ArrowBack} alt="back"/></Button>
